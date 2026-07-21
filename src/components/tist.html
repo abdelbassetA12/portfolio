@@ -1,0 +1,275 @@
+ 
+<div class="profile-card">
+
+  <div class="card-glow"></div>
+
+  <div class="profile-image">
+    <span>AB</span>
+  </div>
+
+  <div class="profile-content">
+    <span class="profile-status">Available</span>
+
+    <h2>Abdo Creative</h2>
+
+    <p>
+      Creative Developer & UI Designer
+    </p>
+
+    <div class="profile-stats">
+      <div>
+        <strong>48</strong>
+        <span>Projects</span>
+      </div>
+
+      <div>
+        <strong>12K</strong>
+        <span>Followers</span>
+      </div>
+
+      <div>
+        <strong>98%</strong>
+        <span>Success</span>
+      </div>
+    </div>
+
+    <button class="profile-button">
+      View Profile
+      <span>→</span>
+    </button>
+  </div>
+
+</div>
+ 
+ 
+ 
+
+
+ <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #0b0b0f;
+  font-family: Arial, sans-serif;
+}
+
+
+/* 2 — Card */
+
+.profile-card {
+  position: relative;
+  width: 360px;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #15151c;
+  color: white;
+}
+
+
+/* 3 — Border */
+
+.profile-card {
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* 4 — Shadow */
+
+.profile-card {
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.5);
+}
+
+
+/* 5 — Profile Image */
+
+.profile-image {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #06b6d4
+  );
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
+/* 6 — Content */
+
+.profile-content {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.profile-content h2 {
+  margin: 12px 0 8px;
+  font-size: 26px;
+}
+
+.profile-content p {
+  margin: 0;
+  color: #8f8f9d;
+}
+
+
+/* 7 — Status */
+
+.profile-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(34,197,94,0.1);
+  color: #4ade80;
+  font-size: 12px;
+}
+
+
+/* 8 — Stats */
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.profile-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.profile-stats strong {
+  font-size: 18px;
+}
+
+.profile-stats span {
+  color: #777783;
+  font-size: 11px;
+}
+
+
+/* 9 — Button */
+
+.profile-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #06b6d4
+  );
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* 10 — Button Hover */
+
+.profile-button {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.profile-button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 30px rgba(124,58,237,0.35);
+}
+
+
+/* 11 — Card Hover */
+
+.profile-card {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.profile-card:hover {
+  transform:
+    translateY(-10px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.65);
+}
+
+
+/* 12 — Glow */
+
+.card-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -80px;
+  right: -80px;
+  border-radius: 50%;
+  background: #7c3aed;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+
+/* 13 — Image Animation */
+
+.profile-image {
+  transition:
+    transform 0.5s ease;
+}
+
+.profile-card:hover .profile-image {
+  transform:
+    scale(1.08)
+    rotate(5deg);
+}
+
+
+/* 14 — Final Animation */
+
+.card-glow {
+  animation:
+    glowMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove {
+
+  from {
+    transform: translate(
+      0,
+      0
+    );
+  }
+
+  to {
+    transform: translate(
+      -80px,
+      100px
+    );
+  }
+
+}
+
+ </style>

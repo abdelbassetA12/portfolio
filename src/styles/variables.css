@@ -1,0 +1,40 @@
+:root{
+
+    /* Colors */
+
+    --bg:#070B16;
+
+    --card:#101726;
+
+    --card-2:#141D2F;
+
+    --border:rgba(255,255,255,.06);
+
+    --primary:#7C3AED;
+
+    --primary-light:#9D5CFF;
+
+    --white:#FFFFFF;
+
+    --gray:#A4A9B6;
+
+    --success:#22C55E;
+
+    /* Layout */
+
+    --container:1320px;
+
+    --radius:18px;
+
+    --transition:.35s;
+
+    /* Shadows */
+
+    --shadow:
+        0 20px 45px rgba(0,0,0,.35);
+
+    --purple-shadow:
+        0 15px 35px rgba(124,58,237,.35);
+
+}
+
