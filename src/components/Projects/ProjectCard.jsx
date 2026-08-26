@@ -32,11 +32,7 @@ export default function ProjectCard({
 
 </div>
 
-<button>
 
-<HiOutlineExternalLink/>
-
-</button>
 <button
     type="button"
     onClick={() => {
