@@ -1,7 +1,8 @@
  
 import { Link } from 'react-router-dom';
 import ProjectCard from "./ProjectCard";
-
+import { useProjects } from "../../context/ProjectContext";
+/*
 const projects=[
 
 {
@@ -48,8 +49,14 @@ tags:["React Native","Firebase","Redux"]
 }
 
 ];
+*/
 
 export default function Projects(){
+    const {
+        projects,
+        loading
+      } = useProjects();
+   
 
 return(
 
@@ -79,7 +86,11 @@ Featured Projects
 
 
 </div>
+ {loading ? (
 
+          <p>Loading projects...</p>
+
+        ) : (
 <div className="projects-grid">
 
 {
@@ -100,6 +111,7 @@ key={index}
 
 </div>
 
+    )}
 </div>
 <style>{`
 .projects{

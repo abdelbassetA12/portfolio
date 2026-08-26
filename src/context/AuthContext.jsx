@@ -56,15 +56,40 @@ export function AuthProvider({ children }) {
 };
 
 
-  // ✅ register
-  const register = async (form) => {
+ const register = async (form) => {
+  try {
     await axios.post(
       `${API_BASE}/api/auth/register`,
       form,
-      { withCredentials: true }
+      {
+        withCredentials: true,
+      }
     );
+
+    // تسجيل الدخول مباشرة بعد إنشاء الحساب
+    await axios.post(
+      `${API_BASE}/api/auth/login`,
+      {
+        username: form.username,
+        password: form.password,
+      },
+      {
+        withCredentials: true,
+      }
+    );
+
     await fetchUser();
-  };
+
+    return {
+      success: true,
+    };
+  } catch (err) {
+    return {
+      success: false,
+      error: err.response?.data?.error || "Registration failed",
+    };
+  }
+};
 
   // ✅ logout
   const logout = async () => {

@@ -6,7 +6,8 @@ export default function ProjectCard({
     title,
     category,
     description,
-    tags
+    tags,
+    url
 }){
 
     return(
@@ -36,6 +37,24 @@ export default function ProjectCard({
 <HiOutlineExternalLink/>
 
 </button>
+<button
+    type="button"
+    onClick={() => {
+        if (!url) return;
+
+        const projectUrl =
+            url.startsWith("http://") || url.startsWith("https://")
+                ? url
+                : `https://${url}`;
+
+        window.open(projectUrl, "_blank", "noopener,noreferrer");
+    }}
+    disabled={!url}
+    title={url ? "Open project" : "No project link"}
+>
+    <HiOutlineExternalLink />
+</button>
+ 
 
 </div>
 
