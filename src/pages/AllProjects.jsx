@@ -83,11 +83,11 @@ export default function AllProjects() {
 
 
 
-.projects-grid{
+ 
+    .projects-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:30px;
-    align-items:stretch;
 }
 
 /* =========================
