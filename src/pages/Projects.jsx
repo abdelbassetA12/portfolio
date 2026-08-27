@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useProjects } from "../context/ProjectContext";
 
 export default function Projects() {
+  const [imageFile, setImageFile] = useState(null);
   const {
     projects,
     loading,
@@ -14,7 +15,7 @@ export default function Projects() {
     title: "",
     category: "",
     description: "",
-    image: "",
+    //image: "",
     url: "",
     tags: "",
   };
@@ -28,6 +29,10 @@ export default function Projects() {
   const [error, setError] =
     useState("");
 
+    const handleImageChange = (e) => {
+  setImageFile(e.target.files[0] || null);
+};
+
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -38,7 +43,49 @@ export default function Projects() {
   // =========================
   // SUBMIT
   // =========================
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
+  setError("");
+
+  try {
+    const data = new FormData();
+
+    data.append("title", form.title);
+    data.append("category", form.category);
+    data.append("description", form.description);
+    data.append("url", form.url);
+
+    const tags = form.tags
+      .split(",")
+      .map((tag) => tag.trim())
+      .filter(Boolean);
+
+    tags.forEach((tag) => {
+      data.append("tags", tag);
+    });
+
+    if (imageFile) {
+      data.append("image", imageFile);
+    }
+
+    if (editingId) {
+      await updateProject(editingId, data);
+    } else {
+      await createProject(data);
+    }
+
+    setForm(emptyForm);
+    setImageFile(null);
+    setEditingId(null);
+  } catch (err) {
+    setError(
+      err.response?.data?.error ||
+        "Something went wrong"
+    );
+  }
+};
+/*
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -71,12 +118,30 @@ export default function Projects() {
           "Something went wrong"
       );
     }
-  };
+  };*/
 
   // =========================
   // EDIT
   // =========================
+const handleEdit = (project) => {
+  setEditingId(project._id);
 
+  setForm({
+    title: project.title || "",
+    category: project.category || "",
+    description: project.description || "",
+    url: project.url || "",
+    tags: project.tags?.join(", ") || "",
+  });
+
+  setImageFile(null);
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+/*
   const handleEdit = (project) => {
     setEditingId(project._id);
 
@@ -95,17 +160,24 @@ export default function Projects() {
       top: 0,
       behavior: "smooth",
     });
-  };
+  };*/
 
   // =========================
   // CANCEL
   // =========================
-
+const cancelEdit = () => {
+  setEditingId(null);
+  setForm(emptyForm);
+  setImageFile(null);
+  setError("");
+};
+/*
   const cancelEdit = () => {
     setEditingId(null);
     setForm(emptyForm);
     setError("");
-  };
+  };*/
+
 
   // =========================
   // DELETE
@@ -220,6 +292,23 @@ export default function Projects() {
                 rows="5"
               />
             </div>
+
+            <div className="form-group">
+  <label>Project Image</label>
+
+  <input
+    type="file"
+    name="image"
+    accept="image/*"
+    onChange={handleImageChange}
+  />
+
+  {imageFile && (
+    <small>
+      Selected: {imageFile.name}
+    </small>
+  )}
+</div>
 
             <div className="form-group">
               <label>

@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import ProjectCard from "./ProjectCard";
 import { useProjects } from "../../context/ProjectContext";
-/*
+ 
 const projects=[
 
 {
@@ -49,13 +49,13 @@ tags:["React Native","Firebase","Redux"]
 }
 
 ];
-*/
+ 
 
 export default function Projects(){
     const {
-        projects,
+      //  projects,
         loading
-      } = useProjects();
+      } = useProjects(); 
    
 
 return(
