@@ -491,7 +491,7 @@ export default function About() {
    ========================================================= */
 
 .about-intro {
-  padding: 76px 0 68px;
+  padding: 100px 0 68px;
 }
 
 .about-grid {
