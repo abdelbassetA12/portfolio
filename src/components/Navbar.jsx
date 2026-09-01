@@ -57,9 +57,15 @@ Abdelbasset Dev.
   Home
 </NavLink>
 
-<a href="/">
-About
-</a>
+<NavLink
+  to="/About"
+  className={({ isActive }) => (isActive ? "active" : "")}
+  onClick={() => setMenuOpen(false)}
+>
+  About
+</NavLink>
+
+ 
 
 <a href="/">
 Skills
