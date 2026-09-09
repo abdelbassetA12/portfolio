@@ -323,7 +323,7 @@ export default function About() {
                     </svg>
                   </div>
 
-                  <span>elhajiriabdelbasset2020.com</span>
+                  <span>elhajiriabdelbasset2020@gmail.com</span>
                 </div>
 
                 <div className="contact-detail">
