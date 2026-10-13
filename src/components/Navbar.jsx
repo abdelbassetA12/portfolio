@@ -27,7 +27,7 @@ useEffect(() => {
 
 return (
 
-<header className="navbar">
+<header className="navbar display-personal-hub">
 
 <div className="container nav-container">
 

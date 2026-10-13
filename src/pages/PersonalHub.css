@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.personal-hub-page {
+      --bg: #0b0b10;
+      --panel: rgba(20,20,29,.82);
+      --text: #f4f3f8;
+      --muted: #a2a1b2;
+      --line: rgba(255,255,255,.1);
+      --lime: #c9ff57;
+      --purple: #a58bff;
+      --radius: 24px;
+    }.personal-hub-page, .personal-hub-page * {
+      box-sizing: border-box;
+    }.personal-hub-page {
+      scroll-behavior: smooth;
+    }.personal-hub-page {
+      margin: 0;
+      min-height: 100vh;
+      padding: 34px 18px 46px;
+      overflow-x: hidden;
+      background:
+        radial-gradient(ellipse at 12% 5%, rgba(165,139,255,.17), transparent 34rem),
+        radial-gradient(ellipse at 90% 42%, rgba(201,255,87,.08), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font-family: "Manrope", sans-serif;
+    }.personal-hub-page a {
+      color: inherit;
+      text-decoration: none;
+    }.personal-hub-page button {
+      font: inherit;
+    }.personal-hub-page .page {
+      position: relative;
+      width: 100%;
+      max-width: 1040px;
+      margin: auto;
+    }.personal-hub-page .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 38px;
+    }.personal-hub-page .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }.personal-hub-page .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 31px;
+      height: 31px;
+      border-radius: 10px;
+      background: var(--lime);
+      color: #111;
+      font-size: 15px;
+      font-weight: 900;
+    }.personal-hub-page .top-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+      flex-wrap: wrap;
+    }.personal-hub-page .availability {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #d9d8e2;
+      font-size: 10px;
+      letter-spacing: .04em;
+    }.personal-hub-page .dot {
+      width: 7px;
+      height: 7px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 14px rgba(201,255,87,.75);
+    }.personal-hub-page .lang-toggle {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-size: 11px;
+      cursor: pointer;
+      transition: .2s ease;
+    }.personal-hub-page .lang-toggle:hover {
+      border-color: var(--lime);
+      color: var(--lime);
+    }.personal-hub-page .layout {
+      display: grid;
+      grid-template-columns: minmax(0,1.12fr) minmax(300px,.88fr);
+      align-items: stretch;
+      gap: 20px;
+    }.personal-hub-page .hero,
+.personal-hub-page .side-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }.personal-hub-page .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(24px,4.5vw,48px);
+    }.personal-hub-page .hero::after {
+      position: absolute;
+      top: -105px;
+      right: -100px;
+      width: 240px;
+      height: 240px;
+      border: 1px solid rgba(201,255,87,.15);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 30px rgba(201,255,87,.025),
+        0 0 0 60px rgba(201,255,87,.02);
+      content: "";
+      pointer-events: none;
+    }.personal-hub-page .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--lime);
+      font: 10px "DM Mono", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }.personal-hub-page .eyebrow::before {
+      width: 23px;
+      height: 1px;
+      background: var(--lime);
+      content: "";
+    }.personal-hub-page .profile-row {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      margin: 29px 0 26px;
+    }.personal-hub-page .avatar-wrap {
+      position: relative;
+      width: 104px;
+      height: 104px;
+      flex: 0 0 104px;
+    }.personal-hub-page .avatar {
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 30px;
+      background: #242431;
+      object-fit: cover;
+    }.personal-hub-page .avatar-wrap::after {
+      position: absolute;
+      inset: -5px;
+      border: 1px solid rgba(201,255,87,.5);
+      border-radius: 35px;
+      transform: rotate(-5deg);
+      content: "";
+      pointer-events: none;
+    }.personal-hub-page .name {
+      margin: 0 0 9px;
+      font-size: clamp(25px,4vw,37px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -.055em;
+    }.personal-hub-page .name-dot {
+      color: var(--lime);
+    }.personal-hub-page .role {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }.personal-hub-page .role-accent {
+      color: var(--lime);
+    }.personal-hub-page .headline {
+      max-width: 550px;
+      margin: 25px 0 14px;
+      font-size: clamp(21px,2.8vw,29px);
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: -.045em;
+    }.personal-hub-page .headline em {
+      color: var(--lime);
+      font-style: normal;
+    }.personal-hub-page .bio {
+      max-width: 500px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 2;
+    }.personal-hub-page .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 23px 0 30px;
+    }.personal-hub-page .tag {
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      color: #d6d5df;
+      font: 10px "DM Mono", monospace;
+    }.personal-hub-page .tag strong {
+      color: var(--lime);
+      font-weight: 500;
+    }.personal-hub-page .primary-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 17px 18px;
+      border-radius: 15px;
+      background: var(--lime);
+      color: #10110b;
+      font-size: 12px;
+      font-weight: 800;
+      transition: transform .2s, box-shadow .2s;
+    }.personal-hub-page .primary-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(201,255,87,.12);
+    }.personal-hub-page .arrow {
+      font-size: 20px;
+      line-height: 1;
+    }.personal-hub-page .edit-note {
+      margin-top: 14px;
+      color: #777687;
+      font-size: 10px;
+      line-height: 1.9;
+    }.personal-hub-page .side {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-width: 0;
+    }.personal-hub-page .side-card {
+      padding: 25px;
+    }.personal-hub-page .section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+    }.personal-hub-page .section-heading h2 {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }.personal-hub-page .section-index {
+      flex-shrink: 0;
+      color: #777687;
+      font: 10px "DM Mono", monospace;
+    }.personal-hub-page .link-list {
+      display: grid;
+      gap: 9px;
+    }.personal-hub-page .link-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      min-width: 0;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255,255,255,.018);
+      transition: border-color .2s, background .2s, transform .2s;
+    }.personal-hub-page .link-item:hover {
+      border-color: rgba(201,255,87,.5);
+      background: rgba(201,255,87,.045);
+      transform: translateX(3px);
+    }.personal-hub-page .link-icon {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      border-radius: 12px;
+      background: #22222d;
+      color: var(--lime);
+      font-size: 14px;
+      font-weight: 800;
+    }.personal-hub-page .link-copy {
+      min-width: 0;
+      flex: 1;
+    }.personal-hub-page .link-title {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11px;
+      font-weight: 800;
+    }.personal-hub-page .link-sub {
+      display: block;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }.personal-hub-page .link-arrow {
+      color: #777687;
+      font-size: 17px;
+    }.personal-hub-page .services {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 9px;
+    }.personal-hub-page .service {
+      min-height: 110px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255,255,255,.018);
+    }.personal-hub-page .service-number {
+      color: var(--lime);
+      font: 10px "DM Mono", monospace;
+    }.personal-hub-page .service h3 {
+      margin: 15px 0 6px;
+      font-size: 12px;
+    }.personal-hub-page .service p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.8;
+    }.personal-hub-page .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 22px;
+      padding: 17px 4px 0;
+      color: #777687;
+      font: 9px "DM Mono", monospace;
+    }.personal-hub-page .social-mini {
+      display: flex;
+      gap: 15px;
+    }.personal-hub-page .social-mini a:hover {
+      color: var(--lime);
+    }.personal-hub-page /* Arabic and RTL */
+
+    html[lang="ar"] body {
+      font-family: "Cairo", sans-serif;
+    }.personal-hub-page[lang="ar"] .hero,
+.personal-hub-page[lang="ar"] .side-card {
+      text-align: right;
+    }.personal-hub-page[lang="ar"] .profile-row,
+.personal-hub-page[lang="ar"] .tags,
+.personal-hub-page[lang="ar"] .link-item,
+.personal-hub-page[lang="ar"] .primary-link {
+      direction: rtl;
+    }.personal-hub-page[lang="ar"] .link-arrow {
+      transform: scaleX(-1);
+    }.personal-hub-page[lang="ar"] .name {
+      letter-spacing: 0;
+      line-height: 1.3;
+    }.personal-hub-page[lang="ar"] .eyebrow {
+      letter-spacing: 0;
+    }.personal-hub-page[lang="ar"] .role {
+      line-height: 2;
+    }.personal-hub-page[lang="ar"] .availability,
+.personal-hub-page[lang="ar"] .brand,
+.personal-hub-page[lang="ar"] .bottom,
+.personal-hub-page[lang="ar"] .section-index {
+      letter-spacing: 0;
+    }.personal-hub-page[lang="ar"] .link-item:hover {
+      transform: translateX(-3px);
+    }.personal-hub-page[lang="ar"] .hero::after {
+      right: auto;
+      left: -100px;
+    }
+
+    @media (max-width: 760px) {.personal-hub-page {
+        padding: 20px 13px 30px;
+      }.personal-hub-page .topbar {
+        margin-bottom: 25px;
+      }.personal-hub-page .layout {
+        grid-template-columns: 1fr;
+      }.personal-hub-page .hero {
+        padding: 27px 23px;
+      }.personal-hub-page .side-card {
+        padding: 22px;
+      }.personal-hub-page .avatar-wrap {
+        width: 88px;
+        height: 88px;
+        flex-basis: 88px;
+      }.personal-hub-page .avatar {
+        border-radius: 25px;
+      }.personal-hub-page .avatar-wrap::after {
+        border-radius: 30px;
+      }.personal-hub-page .bottom {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 430px) {.personal-hub-page .topbar {
+        align-items: flex-start;
+      }.personal-hub-page .top-actions {
+        gap: 10px;
+      }.personal-hub-page .availability {
+        max-width: 145px;
+        font-size: 9px;
+      }.personal-hub-page .brand {
+        font-size: 9px;
+      }.personal-hub-page .profile-row {
+        gap: 16px;
+      }.personal-hub-page .name {
+        font-size: 29px;
+      }.personal-hub-page .headline {
+        font-size: 23px;
+      }.personal-hub-page .services {
+        gap: 8px;
+      }.personal-hub-page .service {
+        padding: 12px;
+      }.personal-hub-page .bottom {
+        font-size: 9px;
+      }
+    }
+
+    @media (max-width: 350px) {.personal-hub-page .topbar {
+        flex-direction: column;
+      }.personal-hub-page .top-actions {
+        justify-content: space-between;
+        width: 100%;
+      }.personal-hub-page .profile-row {
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {.personal-hub-page *,
+.personal-hub-page *::before,
+.personal-hub-page *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
