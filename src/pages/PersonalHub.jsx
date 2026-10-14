@@ -19,7 +19,7 @@ const translations = {
     githubSub: "Code, experiments & projects",
     linkedinSub: "Professional profile & connections",
     instagramSub: "Behind the scenes & new work",
-    portfolioTitle: "Portfolio / Behance",
+    portfolioTitle: "Portfolio",
     portfolioSub: "Selected work & visual concepts",
     hireTitle: "Hire me",
     hireSub: "Freelance opportunities",
@@ -52,7 +52,7 @@ const translations = {
     githubSub: "الشيفرات والتجارب والمشاريع",
     linkedinSub: "ملفي المهني وشبكة علاقاتي",
     instagramSub: "كواليس العمل وأحدث المشاريع",
-    portfolioTitle: "معرض الأعمال / Behance",
+    portfolioTitle: "معرض الأعمال",
     portfolioSub: "نماذج من أعمالي وأفكاري الإبداعية",
     hireTitle: "تعاقد معي",
     hireSub: "فرص العمل الحر",
@@ -144,16 +144,16 @@ export default function PersonalHub() {
               <a className="link-item" href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 <span className="link-icon">⌘</span><span className="link-copy"><span className="link-title">GitHub</span><span className="link-sub">{t.githubSub}</span></span><span className="link-arrow">↗</span>
               </a>
-              <a className="link-item" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <a className="link-item" href="https://www.linkedin.com/in/abdelbasset-el-hajiri-65036830a" target="_blank" rel="noopener noreferrer">
                 <span className="link-icon">in</span><span className="link-copy"><span className="link-title">LinkedIn</span><span className="link-sub">{t.linkedinSub}</span></span><span className="link-arrow">↗</span>
               </a>
-              <a className="link-item" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <a className="link-item" href="https://www.instagram.com/abdelbasset_eh/" target="_blank" rel="noopener noreferrer">
                 <span className="link-icon">◎</span><span className="link-copy"><span className="link-title">Instagram</span><span className="link-sub">{t.instagramSub}</span></span><span className="link-arrow">↗</span>
               </a>
-              <a className="link-item" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
-                <span className="link-icon">Bē</span><span className="link-copy"><span className="link-title">{t.portfolioTitle}</span><span className="link-sub">{t.portfolioSub}</span></span><span className="link-arrow">↗</span>
+              <a className="link-item" href="https://portfolio-ruby-eight-kq5qz7pf3m.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <span className="link-icon">Me</span><span className="link-copy"><span className="link-title">{t.portfolioTitle}</span><span className="link-sub">{t.portfolioSub}</span></span><span className="link-arrow">↗</span>
               </a>
-              <a className="link-item" href="https://www.upwork.com/" target="_blank" rel="noopener noreferrer">
+              <a className="link-item" href="https://www.upwork.com/freelancers/~016eb755e81c8f3902" target="_blank" rel="noopener noreferrer">
                 <span className="link-icon">↗</span><span className="link-copy"><span className="link-title">{t.hireTitle}</span><span className="link-sub">{t.hireSub}</span></span><span className="link-arrow">↗</span>
               </a>
             </nav>
