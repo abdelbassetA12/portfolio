@@ -141,9 +141,13 @@ export default function PersonalHub() {
               <h2>{t.linksHeading}</h2><span className="section-index">LINKS / 01</span>
             </div>
             <nav className="link-list" aria-label="Personal links">
-              <a className="link-item" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              {/*
+              <a  className="link-item" href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 <span className="link-icon">⌘</span><span className="link-copy"><span className="link-title">GitHub</span><span className="link-sub">{t.githubSub}</span></span><span className="link-arrow">↗</span>
               </a>
+              
+              */}
+              
               <a className="link-item" href="https://www.linkedin.com/in/abdelbasset-el-hajiri-65036830a" target="_blank" rel="noopener noreferrer">
                 <span className="link-icon">in</span><span className="link-copy"><span className="link-title">LinkedIn</span><span className="link-sub">{t.linkedinSub}</span></span><span className="link-arrow">↗</span>
               </a>
