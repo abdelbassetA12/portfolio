@@ -64,6 +64,13 @@ Abdelbasset Dev.
 >
   About
 </NavLink>
+<NavLink
+  to="/PersonalHub"
+  className={({ isActive }) => (isActive ? "active" : "")}
+  onClick={() => setMenuOpen(false)}
+>
+  PersonalHub
+</NavLink>
 
  
 
