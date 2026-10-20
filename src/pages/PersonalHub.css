@@ -140,7 +140,7 @@
     }.personal-hub-page .avatar-wrap {
       position: relative;
       width: 104px;
-      height: 104px;
+      height: 120px;
       flex: 0 0 104px;
     }.personal-hub-page .avatar {
       width: 100%;
@@ -149,6 +149,7 @@
       border-radius: 30px;
       background: #242431;
       object-fit: cover;
+      object-position: center 20%;
     }.personal-hub-page .avatar-wrap::after {
       position: absolute;
       inset: -5px;

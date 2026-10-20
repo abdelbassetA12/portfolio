@@ -180,7 +180,17 @@ export default function PersonalHub() {
       <footer className="bottom">
         <span>© {new Date().getFullYear()} ABDELBASSET EL HAJIRI</span>
         <div className="social-mini">
-          <a href="mailto:your.email@example.com">{t.emailFooter}</a>
+          
+          
+<a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=elhajiriabdelbasset2020@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  {t.emailFooter}
+</a>
+
+          
           <a href="#top">{t.backTop}</a>
         </div>
         <span>{t.footerNote}</span>
