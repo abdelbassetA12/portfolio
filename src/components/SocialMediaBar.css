@@ -1,0 +1,397 @@
+
+/* =========================================
+   FIXED SOCIAL MEDIA BAR
+========================================= */
+
+.social-bar {
+  --social-purple: #8b3dff;
+  --social-text: #e9e5f2;
+  --social-muted: #9691a5;
+
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+
+  width: max-content;
+  max-width: calc(100% - 32px);
+
+  color: var(--social-text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.social-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  min-height: 66px;
+  padding: 10px 15px;
+
+  border: 1px solid rgba(174, 130, 255, 0.19);
+  border-radius: 18px;
+
+  background: rgba(8, 9, 19, 0.88);
+
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+
+  box-shadow:
+    0 12px 45px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(124, 44, 255, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* BRAND */
+
+.social-bar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+  padding-right: 17px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-status-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+  border-radius: 50%;
+
+  background: #a855f7;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
+}
+
+.social-bar-label {
+  color: #bdb4d2;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  white-space: nowrap;
+}
+
+/* SOCIAL LINKS */
+
+.social-bar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-bar-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+
+  color: #a6a1b5;
+  text-decoration: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.social-bar-link svg {
+  display: block;
+
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.22s ease;
+}
+
+.social-bar-link .social-icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.social-bar-link:hover {
+  color: var(--social-color);
+
+  border-color: color-mix(
+    in srgb,
+    var(--social-color) 45%,
+    transparent
+  );
+
+  background: color-mix(
+    in srgb,
+    var(--social-color) 10%,
+    #0b0a15
+  );
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 5px 20px
+    color-mix(in srgb, var(--social-color) 14%, transparent);
+}
+
+.social-bar-link:hover svg {
+  transform: scale(1.08);
+}
+
+/* TOOLTIP */
+
+.social-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 13px);
+
+  padding: 7px 10px;
+
+  color: #fff;
+  background: #171322;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translate(-50%, 5px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.social-tooltip::after {
+  content: "";
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  border: 5px solid transparent;
+  border-top-color: #171322;
+
+  transform: translateX(-50%);
+}
+
+.social-bar-link:hover .social-tooltip,
+.social-bar-link:focus-visible .social-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* CONTACT BUTTON */
+
+.social-bar-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 40px;
+  padding: 0 12px;
+
+  flex-shrink: 0;
+
+  color: #fff;
+  text-decoration: none;
+
+  border: 1px solid rgba(172, 115, 255, 0.25);
+  border-radius: 11px;
+
+  background: linear-gradient(
+    120deg,
+    #6525d9,
+    #8739ed 60%,
+    #a446e7
+  );
+
+  box-shadow: 0 4px 17px rgba(113, 46, 224, 0.2);
+
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.social-bar-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 23px rgba(113, 46, 224, 0.35);
+}
+
+.social-bar-contact svg {
+  width: 16px;
+  height: 16px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-contact-arrow {
+  font-size: 14px;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.social-bar a:focus-visible {
+  outline: 2px solid #b98aff;
+  outline-offset: 4px;
+}
+
+/* TABLET */
+
+@media (max-width: 760px) {
+  .social-bar {
+    bottom: 14px;
+    max-width: calc(100% - 24px);
+  }
+
+  .social-bar-inner {
+    gap: 12px;
+    min-height: 59px;
+    padding: 9px 10px;
+    border-radius: 15px;
+  }
+
+  .social-bar-brand {
+    display: none;
+  }
+
+  .social-bar-links {
+    gap: 6px;
+  }
+
+  .social-bar-link {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+    border-radius: 10px;
+  }
+
+  .social-bar-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .social-bar-contact {
+    min-height: 36px;
+    padding: 0 9px;
+    gap: 5px;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 420px) {
+  .social-bar {
+    bottom: 10px;
+    max-width: calc(100% - 16px);
+  }
+
+  .social-bar-inner {
+    gap: 7px;
+    padding: 8px;
+    border-radius: 14px;
+  }
+
+  .social-bar-links {
+    gap: 4px;
+  }
+
+  .social-bar-link {
+    width: 32px;
+    height: 34px;
+    flex-basis: 32px;
+    border-radius: 9px;
+  }
+
+  .social-bar-link svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .social-bar-contact {
+    min-height: 34px;
+    padding: 0 7px;
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .social-bar-contact svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .social-contact-arrow {
+    display: none;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 350px) {
+  .social-bar-inner {
+    gap: 5px;
+    padding: 6px;
+  }
+
+  .social-bar-links {
+    gap: 3px;
+  }
+
+  .social-bar-link {
+    width: 29px;
+    height: 32px;
+    flex-basis: 29px;
+  }
+
+  .social-bar-contact {
+    padding: 0 5px;
+    font-size: 9px;
+  }
+}
+
+/* REDUCE ANIMATION FOR ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .social-bar *,
+  .social-bar *::before,
+  .social-bar *::after {
+    transition: none !important;
+  }
+}

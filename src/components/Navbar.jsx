@@ -38,7 +38,7 @@ return (
 </div>
 
 <span>
-Abdelbasset Dev.
+Abdelbasset.Dev
 </span>
 
 </div>
@@ -62,7 +62,7 @@ Abdelbasset Dev.
   className={({ isActive }) => (isActive ? "active" : "")}
   onClick={() => setMenuOpen(false)}
 >
-  About
+  About & Skills
 </NavLink>
 <NavLink
   to="/PersonalHub"
@@ -74,9 +74,7 @@ Abdelbasset Dev.
 
  
 
-<a href="/">
-Skills
-</a>
+ 
 
 
  
@@ -88,14 +86,15 @@ Skills
 >
   Projects
 </NavLink>
+<NavLink
+  to="/contact"
+  className={({ isActive }) => (isActive ? "active" : "")}
+  onClick={() => setMenuOpen(false)}
+>
+  Contact
+</NavLink>
 
-<a href="/">
-Experience
-</a>
-
-<a href="/">
-Contact
-</a>
+ 
 
 </nav>
 
