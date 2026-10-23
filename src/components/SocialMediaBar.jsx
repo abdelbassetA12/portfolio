@@ -5,7 +5,7 @@ import "./SocialMediaBar.css";
 const socialLinks = [
   {
     name: "Instagram",
-    url: "https://www.instagram.com/YOUR_USERNAME/",
+    url: "https://www.instagram.com/abdelbasset_eh/",
     color: "#E4405F",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -15,6 +15,7 @@ const socialLinks = [
       </svg>
     ),
   },
+  /*
   {
     name: "Facebook",
     url: "https://www.facebook.com/YOUR_USERNAME",
@@ -27,10 +28,10 @@ const socialLinks = [
         />
       </svg>
     ),
-  },
+  },*/
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/YOUR_USERNAME/",
+    url: "https://www.linkedin.com/in/abdelbasset-el-hajiri-65036830a",
     color: "#0A66C2",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -40,6 +41,7 @@ const socialLinks = [
       </svg>
     ),
   },
+  /*
   {
     name: "GitHub",
     url: "https://github.com/YOUR_USERNAME",
@@ -66,6 +68,7 @@ const socialLinks = [
       </svg>
     ),
   },
+  */
   {
     name: "WhatsApp",
     url: "https://wa.me/212700592987",
@@ -77,16 +80,22 @@ const socialLinks = [
       </svg>
     ),
   },
-  {
-    name: "TikTok",
-    url: "https://www.tiktok.com/@YOUR_USERNAME",
-    color: "#25F4EE",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M15 3v11.1a4.1 4.1 0 1 1-3.5-4.1M15 3c.5 2.8 2.2 4.4 5 4.8" />
-      </svg>
-    ),
-  },
+ 
+ 
+{
+  name: "Upwork",
+  url: "https://www.upwork.com/freelancers/~016eb755e81c8f3902",
+  color: "#14A800",
+  icon: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M17.5 8.2c-1.8 0-3.2 1.2-4 3-.6-1-1.1-2.2-1.5-3.5H9.2v5.1c0 1.2-.7 2-1.7 2s-1.7-.8-1.7-2V7.7H3.5v5.1c0 2.8 1.7 4.6 4 4.6s4-1.8 4-4.6v-.4c.4.9.9 1.7 1.5 2.3l-.8 3h2.8l.5-2.1c.6.3 1.3.4 2 .4 2.4 0 4-1.7 4-4s-1.6-3.8-4-3.8Zm0 6c-.5 0-.9-.1-1.3-.4l.9-3.4c.2-.1.3-.1.5-.1 1 0 1.6.8 1.6 1.9s-.7 2-1.7 2Z"
+        className="social-icon-fill"
+      />
+    </svg>
+  ),
+},
+
 ];
 
 export default function SocialMediaBar() {
@@ -118,7 +127,8 @@ export default function SocialMediaBar() {
 
         <a
           className="social-bar-contact"
-          href="mailto:elhajiriabdelbasset2020@gmail.com"
+          target="_blank"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=elhajiriabdelbasset2020@gmail.com"
           aria-label="Contact me by email"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
